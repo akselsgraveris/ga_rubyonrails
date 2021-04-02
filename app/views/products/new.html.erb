@@ -1,0 +1,19 @@
+Please fill out the product form
+<hr>
+<% if @product.errors.any? %>
+    <ul>
+        <% @product.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+    </ul>
+  <% end %>
+
+<%= form_for @product do |f| -%>
+    Product code: <%= f.text_field :product_code %><br />
+    Product date added: <%= f.date_field :date_added %><br />
+    Product name: <%= f.text_field :product_name %><br />
+    Product description: <%= f.text_area :product_description %><br />
+    Product count in warehouse: <%= f.number_field :product_count %><br />
+    
+    <%= f.submit %>
+<% end %>

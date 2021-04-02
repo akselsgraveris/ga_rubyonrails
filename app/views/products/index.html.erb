@@ -1,0 +1,19 @@
+<% if !@products.blank? %>
+<h1>All products listed</h1>
+<br />
+    <table>
+    <% for item in @products %>
+        <tr>
+            <td><%= item.product_code %></td>
+            <td><%= item.date_added %></td>
+            <td><%= item.product_name %></td>
+            <td><%= item.product_description %></td>
+            <td><%= item.product_count %></td>
+        </tr>
+    <% end %>
+    </table>
+    
+    <%= link_to 'New Product', new_product_path %>
+<% else %>
+    There is no products in database
+<% end %>
