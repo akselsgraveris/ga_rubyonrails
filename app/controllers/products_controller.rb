@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
     def index
         @products = Product.all
     end
-    
+
     def new
         @product = Product.new
     end
@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
             render 'new'
         end
     end
-    
+
     def product_params
         params.require(:product).permit!
     end

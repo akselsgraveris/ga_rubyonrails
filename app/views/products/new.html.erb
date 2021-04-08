@@ -8,7 +8,7 @@ Please fill out the product form
     </ul>
   <% end %>
 
-<%= form_for @product do |f| -%>
+<%= form_for @product do |f| %>
     Product code: <%= f.text_field :product_code %><br />
     Product date added: <%= f.date_field :date_added %><br />
     Product name: <%= f.text_field :product_name %><br />
